@@ -2,7 +2,6 @@
 import urllib
 import urllib2
 import cookielib
-from BeautifulSoup import BeautifulSoup as bs
 import json
 
 handler = urllib2.HTTPHandler()
