@@ -52,9 +52,9 @@ item_count = jsondata['item_count']
 
 url_list = []
 
-if item_count >= 42:
+if item_count > 42:
     page_num = 1
-    while page_num*42 <= item_count+42:
+    while page_num*42 < item_count+42:
         jsondata = rq('https://d3.ru/api/users/' + username + '/favourites/posts/?page=' + str(page_num), False, headers, 'GET')
         current_list = get_links(jsondata)
         url_list = url_list + current_list
