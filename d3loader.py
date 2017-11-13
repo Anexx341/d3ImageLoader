@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import urllib
 import urllib2
-import cookielib
 import json
 
 handler = urllib2.HTTPHandler()
