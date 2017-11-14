@@ -68,7 +68,11 @@ img_num = 1
 print u'У Вас (примерно...) ' + str(len(url_list)) + u' картинок.'
 print u'Сохраняю...'
 for link in url_list:
-    urllib.urlretrieve(link, u'Картинка ' + str(img_num) + '.jpeg')
+    print '%03d' % img_num + ". " + (str(link) if link else u'Одни буквы')
+    try:
+        urllib.urlretrieve(link, u'Картинка ' + str(img_num) + '.jpeg')
+    except AttributeError:
+        pass
     img_num+=1
 
 print u'Готово'
